@@ -5,7 +5,7 @@
 class Square: public Shape{
 	
 	public:
-	Square(const schar* s, double x, double y,unsigned int a);
+	Square(const char* s, double x, double y,unsigned int a);
 	
 	unsigned int area();
 	

@@ -13,7 +13,7 @@ class Point{
 	static int id;
 	static int counter();
 	
-	point(double a, double b);
+	Point(double a, double b);
 	//Default ctor
 	
 	double getX();
