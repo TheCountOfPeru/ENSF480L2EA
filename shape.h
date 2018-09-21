@@ -8,7 +8,7 @@ class shape{
 	point origin;
 	char* shapeName;
 	public:
-	shape(const char *s);
+	shape(const char *s, double x, double y);
 	//ctor
 	shape(const shape& source);
 	~shape();

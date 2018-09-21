@@ -10,4 +10,7 @@ int main()
 {
 	point a(100000.01,100000.01);
 	a.display();
+	shape b("first", 100000.01, 10000.01);
+	b.display();
+	
 }

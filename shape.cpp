@@ -3,15 +3,17 @@
 // Author - Jonathan Yee
 
 #include "shape.h"
+#include "point.h"
+#include <string.h>
 #include <iostream>
 
 using namespace std;
 
-shape::shape(const char *s, int x, int y)
+shape::shape(const char *s, double x, double y)
 {
-	charsM = new char[lengthM + 1];
-	strcpy(shapeName, s);
-	origin(x,y);
+	//shapeName = new char[lengthM + 1];
+	//strcpy(shapeName, s);
+	point origin(x,y);
 	cout << "\nconstructor with char* argument is called. ";
 }
 	//ctor
@@ -34,7 +36,7 @@ shape& shape::operator =(const shape& rhs)
 	if(this==&rhs)
 		return *this;
 	delete [] shapeName;
-	shapeName = new char[strlen(rhs.shapeNam)+1];
+	shapeName = new char[strlen(rhs.shapeName)+1];
 	if(shapeName == NULL){
 		cerr << "Memory not available...";
 		exit(1);
@@ -50,11 +52,11 @@ point* shape::getOrigin()
 }
 char* shape::getName()
 {
-	
+	return shapeName;
 }
 void shape::display()
 {
-	
+	printf("Shape Name: %s", getName());
 }
 double shape::distance(shape& other)
 {
