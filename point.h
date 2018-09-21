@@ -7,10 +7,12 @@ class point{
 	private:
 	double x,y;
 	
+	
 	public:
-	static int id;
-	point(int a, int b);
+	int id=1000;
+	point(double a, double b);
 	//Default ctor
+	void incr();
 	double getx();
 	double gety();
 	setx(double a);

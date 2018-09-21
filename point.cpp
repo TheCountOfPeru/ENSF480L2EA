@@ -6,13 +6,18 @@
 #include <iostream>
 
 using namespace std;
-
-point::point(int a, int b)
+//int point::id=1000;
+point::point(double a, double b)
 {
 	x = a;
 	y = b;
-	id++;
+	//point::incr();
+		id++;
 }
+void point::incr()
+{
+	id++;
+} 
 double point::getx()
 {
 	return x;
@@ -27,6 +32,8 @@ int point::counter()
 }
 void point::display()
 {
-	printf("X-coordinate: %4.2f\nY-coordinate: %4.2f", getx(), gety());
+	printf("\nX-coordinate: %4.2f\n",getx());
+	printf("Y-coordinate: %4.2f", gety());
+	printf("\n%d\n",id);
 	
 }

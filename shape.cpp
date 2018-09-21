@@ -2,19 +2,19 @@
 // ENSF 480 Lab 2 - FALL 2018 - Exercise A
 // Author - Jonathan Yee
 
-#include "shape.h"
+
 #include "point.h"
+#include "shape.h"
 #include <string.h>
 #include <iostream>
 
 using namespace std;
 
-shape::shape(const char *s, double x, double y)
+shape::shape(const char *s, double x, double y):origin(x,y)
 {
 	//shapeName = new char[lengthM + 1];
 	//strcpy(shapeName, s);
-	point origin(x,y);
-	cout << "\nconstructor with char* argument is called. ";
+	cout << "\nconstructor with char* argument is called. \n";
 }
 	//ctor
 shape::shape(const shape& source):origin(source.origin), shapeName(new
@@ -48,7 +48,7 @@ shape& shape::operator =(const shape& rhs)
 	//overload assignment
 point* shape::getOrigin()
 {
-	
+	return NULL;
 }
 char* shape::getName()
 {
@@ -56,16 +56,19 @@ char* shape::getName()
 }
 void shape::display()
 {
-	printf("Shape Name: %s", getName());
+	origin.display();
+	//printf("Shape Name: %s", getName());
 }
 double shape::distance(shape& other)
 {
-	
+	return 0;
 }
-static double shape::distance(shape& the_shape, shape& other)
+
+double shape::distance(shape& the_shape, shape& other)
 {
-	
+	return 0;
 }
+
 void shape::move(double dx, double dy)
 {
 	

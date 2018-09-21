@@ -4,13 +4,19 @@
 
 #include <iostream>
 #include "point.h"
+#include "shape.h"
 using namespace std;
-int point::id = 1000;
+
+//int point::id=1000;
 int main()
 {
 	point a(100000.01,100000.01);
+	point b(13414.124,4141.123);
 	a.display();
-	shape b("first", 100000.01, 10000.01);
 	b.display();
+	
+	//shape b("first", 104500.01, 10000.01);
+	//b.display();
+	return 0;
 	
 }
