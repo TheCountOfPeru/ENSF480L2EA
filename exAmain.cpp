@@ -10,8 +10,8 @@ using namespace std;
 //int point::id=1000;
 int main()
 {
-	point a(100000.01,100000.01);
-	point b(13414.124,4141.123);
+	Point a(100000.01,100000.01);
+	Point b(13414.124,4141.123);
 	a.display();
 	b.display();
 	

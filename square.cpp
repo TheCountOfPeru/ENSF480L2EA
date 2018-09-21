@@ -3,7 +3,9 @@
 #include <iostream>
 #include "square.h"
 
-Square::Square(const schar* s, double x, double y,unsigned int a):
+using namespace std;
+
+Square::Square(const char* s, double x, double y, unsigned int a):
 Shape(s,x,y){
 	side_a = a;
 }
@@ -34,6 +36,11 @@ void Square::set_sideA(unsigned int a){
 	
 void Square::display(){
 	
-	cout<<"Square Name: "<<getName
+	cout<<"Square Name: "<< shapeName <<endl;
+	cout<<"X-coordinate: "<< origin.getX() << endl;
+	cout<<"Y-coordinate: "<< origin.getY() << endl;
+	cout<<"Side a: "<< side_a << endl;
+	cout<<"Area: "<< area() << endl;
+	cout<<"Perimeter: "<< perimeter() << endl;
 }
 	

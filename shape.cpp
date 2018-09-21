@@ -10,28 +10,34 @@
 
 using namespace std;
 
-shape::shape(const char *s, double x, double y):origin(x,y)
+Shape::Shape(const char *s, double x, double y):origin(x,y)
 {
 	//shapeName = new char[lengthM + 1];
 	//strcpy(shapeName, s);
 	cout << "\nconstructor with char* argument is called. \n";
 }
 	//ctor
-shape::shape(const shape& source):origin(source.origin), shapeName(new
+	
+	
+Shape::Shape(const Shape& source):origin(source.origin), shapeName(new
 char[strlen(source.shapeName)+1])
 {
-if(shapeName == NULL){
-cerr << "Memory not available...";
-exit(1);
+	if(shapeName == NULL){
+		cerr << "Memory not available...";
+		exit(1);
+	}
+	strcpy(shapeName, source.shapeName);
 }
-strcpy(shapeName, source.shapeName);
-}
-shape::~shape()
+
+
+Shape::~Shape()
 {
 	delete [] shapeName;
 }
 	//dtor
-shape& shape::operator =(const shape& rhs)
+	
+	
+Shape& Shape::operator =(const Shape& rhs)
 {
 	if(this==&rhs)
 		return *this;
@@ -46,30 +52,40 @@ shape& shape::operator =(const shape& rhs)
 	return *this;
 }
 	//overload assignment
-point* shape::getOrigin()
+	
+	
+Point* Shape::getOrigin()
 {
 	return NULL;
 }
-char* shape::getName()
+
+
+char* Shape::getName()
 {
 	return shapeName;
 }
-void shape::display()
+
+
+void Shape::display()
 {
 	origin.display();
 	//printf("Shape Name: %s", getName());
 }
-double shape::distance(shape& other)
+
+
+double Shape::distance(Shape& other)
 {
 	return 0;
 }
 
-double shape::distance(shape& the_shape, shape& other)
+
+double Shape::distance(Shape& the_shape, Shape& other)
 {
 	return 0;
 }
 
-void shape::move(double dx, double dy)
+
+void Shape::move(double dx, double dy)
 {
 	
 }

@@ -3,21 +3,24 @@
 
 #ifndef POINT_H
 #define POINT_H
-class point{
+
+class Point{
 	private:
 	double x,y;
 	
 	
 	public:
-	int id=1000;
+	static int id;
+	static int counter();
+	
 	point(double a, double b);
 	//Default ctor
-	void incr();
-	double getx();
-	double gety();
+	
+	double getX();
+	double getY();
 	setx(double a);
 	sety(double b);
-	int counter();
+	
 	void display();
 	
 	

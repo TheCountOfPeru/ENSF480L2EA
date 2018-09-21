@@ -4,36 +4,37 @@
 
 #include "point.h"
 #include <iostream>
+#include <stdio.h>
 
 using namespace std;
-//int point::id=1000;
-point::point(double a, double b)
+
+
+int Point::id=1000;
+
+
+Point::Point(double a, double b)
 {
 	x = a;
 	y = b;
-	//point::incr();
-		id++;
-}
-void point::incr()
-{
 	id++;
-} 
-double point::getx()
+}
+
+double Point::getX()
 {
 	return x;
 }
-double point::gety()
+double Point::getY()
 {
 	return y;
 }
-int point::counter()
+int Point::counter()
 {
 	return id;
 }
-void point::display()
+void Point::display()
 {
-	printf("\nX-coordinate: %4.2f\n",getx());
-	printf("Y-coordinate: %4.2f", gety());
+	printf("\nX-coordinate: %4.2f\n", x);
+	printf("Y-coordinate: %4.2f", y);
 	printf("\n%d\n",id);
 	
 }

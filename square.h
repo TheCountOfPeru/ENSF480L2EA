@@ -1,5 +1,7 @@
 // file: square.h
 
+#include "shape.h"
+
 class Square: public Shape{
 	
 	public:
