@@ -9,14 +9,16 @@
 using namespace std;
 
 
-int Point::id=1000;
+int Point::objCount = 0;
 
 
 Point::Point(double a, double b)
 {
+	objCount++;
+	
 	x = a;
 	y = b;
-	id++;
+	id = objCount + 1000;
 }
 
 double Point::getX()
@@ -29,7 +31,7 @@ double Point::getY()
 }
 int Point::counter()
 {
-	return id;
+	return objCount;
 }
 void Point::display()
 {

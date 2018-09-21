@@ -7,10 +7,11 @@
 class Point{
 	private:
 	double x,y;
+	unsigned int id;
 	
 	
 	public:
-	static int id;
+	static int objCount;
 	static int counter();
 	
 	Point(double a, double b);
