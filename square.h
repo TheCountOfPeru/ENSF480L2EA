@@ -1,26 +1,28 @@
 // file: square.h
-
+#ifndef SQUARE_H
+#define SQUARE_H
 #include "shape.h"
 
 class Square: public Shape{
 	
 	public:
-	Square(const char* s, double x, double y,unsigned int a);
+	Square(const char* s, double x, double y, double a);
 	
-	unsigned int area();
+	virtual double area();
 	
-	unsigned int perimeter();
+	virtual double perimeter();
 	
-	unsigned int get_sideA();
+	double get_sideA();
 	
-	void set_sideA(unsigned int a);
+	void set_sideA(double a);
 	
 	virtual void display();
 	
 
 	protected:
-	unsigned int side_a;
+	double side_a;
 	
 	private:
 	
 };
+#endif

@@ -5,7 +5,6 @@
 
 #include "point.h"
 #include "shape.h"
-//#include <math.h>
 #include <string.h>
 #include <iostream>
 

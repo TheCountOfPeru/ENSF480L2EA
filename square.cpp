@@ -5,31 +5,30 @@
 
 using namespace std;
 
-Square::Square(const char* s, double x, double y, unsigned int a):
+Square::Square(const char* s, double x, double y, double a):
 Shape(s,x,y){
 	side_a = a;
 }
 
 
-unsigned int Square::area(){
-	
+double Square::area(){
 	return side_a * side_a;
 }
 	
 	
-unsigned int Square::perimeter(){
+double Square::perimeter(){
 	
 	return side_a * 4;
 }
 	
 	
-unsigned int Square::get_sideA(){
+double Square::get_sideA(){
 	
 	return side_a;
 }
 	
 	
-void Square::set_sideA(unsigned int a){
+void Square::set_sideA(double a){
 	
 	side_a = a;
 }

@@ -7,6 +7,7 @@
 #include "point.h"
 #include "shape.h"
 #include "square.h"
+#include "rectangle.h"
 //#include "rectangle.h"
 using namespace std;
 
@@ -25,8 +26,14 @@ int main()
 	cout<<a.distance(b)<<endl;
 	cout<<Shape::distance(a,b)<<endl;
 	#endif
+	#if 0
 	Square aaa("square1",0,0,1);
 	aaa.display();
+	#endif
+	#if 1
+	Rectangle ab("Rectangle1", 0, 0, 1, 2);
+	ab.display();
+	#endif 
 	return 0;
 	
 }
