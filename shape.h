@@ -18,7 +18,7 @@ class Shape{
 	//overload assignment
 	Point& getOrigin();
 	char* getName();
-	void display();
+	virtual void display();
 	double distance(Shape& other);
 	static double distance(Shape& the_shape, Shape& other);
 	void move(double dx, double dy);

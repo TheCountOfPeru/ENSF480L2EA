@@ -15,7 +15,7 @@ class Square: public Shape{
 	
 	void set_sideA(unsigned int a);
 	
-	void display();
+	virtual void display();
 	
 
 	protected:

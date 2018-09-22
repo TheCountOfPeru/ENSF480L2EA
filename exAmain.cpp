@@ -6,21 +6,27 @@
 #include <math.h>
 #include "point.h"
 #include "shape.h"
+#include "square.h"
+//#include "rectangle.h"
 using namespace std;
 
 int main()
 {
-	Point aa(0,0);
-	Point bb(0,0);
-	aa.display();
-	bb.display();
-	Shape a("first", 0, 0);
-	Shape b("second", 3,4);
+	#if 0
+	Point a(0,0);
+	Point b(0,0);
 	a.display();
 	b.display();
+	Shape aa("first", 0, 0);
+	Shape bb("second", 3,4);
+	aa.display();
+	bb.display();
 	cout<<Point::counter()<<endl;
 	cout<<a.distance(b)<<endl;
 	cout<<Shape::distance(a,b)<<endl;
+	#endif
+	Square aaa("square1",0,0,1);
+	aaa.display();
 	return 0;
 	
 }

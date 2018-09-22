@@ -36,9 +36,11 @@ void Square::set_sideA(unsigned int a){
 	
 void Square::display(){
 	
-	cout<<"Square Name: "<< shapeName <<endl;
-	cout<<"X-coordinate: "<< origin.getX() << endl;
-	cout<<"Y-coordinate: "<< origin.getY() << endl;
+	//cout<<"Square Name: "<< shapeName <<endl;
+	//cout<<"X-coordinate: "<< origin.getX() << endl;
+	//cout<<"Y-coordinate: "<< origin.getY() << endl;
+	printf("Square Name: %s\n", Shape::getName());
+	Shape::getOrigin().display();
 	cout<<"Side a: "<< side_a << endl;
 	cout<<"Area: "<< area() << endl;
 	cout<<"Perimeter: "<< perimeter() << endl;
