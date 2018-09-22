@@ -36,7 +36,5 @@ int Point::counter()
 void Point::display()
 {
 	printf("\nX-coordinate: %4.2f\n", x);
-	printf("Y-coordinate: %4.2f", y);
-	printf("\n%d\n",id);
-	
+	printf("Y-coordinate: %4.2f", y);	
 }
