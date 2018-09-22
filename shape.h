@@ -16,7 +16,7 @@ class Shape{
 	//dtor
 	Shape& operator =(const Shape& rhs);
 	//overload assignment
-	Point* getOrigin();
+	Point& getOrigin();
 	char* getName();
 	void display();
 	double distance(Shape& other);

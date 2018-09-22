@@ -19,9 +19,10 @@ class Point{
 	
 	double getX();
 	double getY();
-	setx(double a);
-	sety(double b);
-	
+	void setx(double a);
+	void sety(double b);
+	double distance (Point& other);
+	static double distance (Point& the_point, Point& other);
 	void display();
 	
 	

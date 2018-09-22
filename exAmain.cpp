@@ -3,20 +3,24 @@
 // Author - Jonathan Yee
 
 #include <iostream>
+#include <math.h>
 #include "point.h"
 #include "shape.h"
 using namespace std;
 
-//int point::id=1000;
 int main()
 {
-	Point a(100000.01,100000.01);
-	Point b(13414.124,4141.123);
+	Point aa(0,0);
+	Point bb(0,0);
+	aa.display();
+	bb.display();
+	Shape a("first", 0, 0);
+	Shape b("second", 3,4);
 	a.display();
 	b.display();
-	
-	//shape b("first", 104500.01, 10000.01);
-	//b.display();
+	cout<<Point::counter()<<endl;
+	cout<<a.distance(b)<<endl;
+	cout<<Shape::distance(a,b)<<endl;
 	return 0;
 	
 }

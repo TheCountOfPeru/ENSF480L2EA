@@ -5,6 +5,7 @@
 
 #include "point.h"
 #include "shape.h"
+//#include <math.h>
 #include <string.h>
 #include <iostream>
 
@@ -12,8 +13,8 @@ using namespace std;
 
 Shape::Shape(const char *s, double x, double y):origin(x,y)
 {
-	//shapeName = new char[lengthM + 1];
-	//strcpy(shapeName, s);
+	shapeName = new char[strlen(s)+1];
+	strcpy(shapeName, s);
 	cout << "\nconstructor with char* argument is called. \n";
 }
 	//ctor
@@ -54,9 +55,9 @@ Shape& Shape::operator =(const Shape& rhs)
 	//overload assignment
 	
 	
-Point* Shape::getOrigin()
+Point& Shape::getOrigin()
 {
-	return NULL;
+	return origin;
 }
 
 
@@ -68,24 +69,25 @@ char* Shape::getName()
 
 void Shape::display()
 {
+	printf("Shape Name: %s\n", getName());
 	origin.display();
-	//printf("Shape Name: %s", getName());
 }
 
 
 double Shape::distance(Shape& other)
 {
-	return 0;
+	return origin.distance(other.getOrigin());
 }
 
 
 double Shape::distance(Shape& the_shape, Shape& other)
 {
-	return 0;
+	return Point::distance(the_shape.getOrigin(), other.getOrigin());
 }
 
 
 void Shape::move(double dx, double dy)
 {
-	
+	origin.setx(origin.getX()+dx);
+	origin.sety(origin.getY()+dy);
 }
