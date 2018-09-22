@@ -2,13 +2,12 @@
 // ENSF 480 Lab 2 -  FALL 2018 - Exercise A
 // Author - Jonathan Yee
 
-#include <iostream>
-#include <math.h>
-#include "point.h"
-#include "shape.h"
-#include "square.h"
-#include "rectangle.h"
+//#include <iostream>
+//#include "point.h"
+//#include "shape.h"
+//#include "square.h"
 //#include "rectangle.h"
+#include "graphicsWorld.h"
 using namespace std;
 
 int main()
@@ -30,10 +29,12 @@ int main()
 	Square aaa("square1",0,0,1);
 	aaa.display();
 	#endif
-	#if 1
+	#if 0
 	Rectangle ab("Rectangle1", 0, 0, 1, 2);
 	ab.display();
 	#endif 
+	GraphicsWorld test;
+	test.run();
 	return 0;
 	
 }

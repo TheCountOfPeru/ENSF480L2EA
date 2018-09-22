@@ -15,7 +15,7 @@ int Point::objCount = 0;
 
 Point::Point(double a, double b)
 {
-	printf("Call to Point ctor\n");
+	//printf("Call to Point ctor\n");
 	objCount++;
 	
 	x = a;
