@@ -6,8 +6,8 @@ class Circle:public Shape
 {
 	public:
 	Circle(const char* s, double x, double y, double r);
-	double area();
-	double perimeter();
+	virtual double area();
+	virtual double perimeter();
 	double get_r();
 	void set_r(double x);
 	virtual void display();
