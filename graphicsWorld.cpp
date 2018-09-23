@@ -4,6 +4,7 @@
 #include "shape.h"
 #include "square.h"
 #include "rectangle.h"
+#include "circle.h"
 #include "graphicsWorld.h"
 using namespace std;
 
@@ -19,13 +20,13 @@ void GraphicsWorld::run()
 	cout << "\nThe distance between m and n again is: "<<Point::distance(m,n);
 #endif	//end of block to test Point
 
-#if 1//Change 0 to 1 to test Square
+#if 0//Change 0 to 1 to test Square
 	cout<<"\n\nTesting functions in class Square\n";
 	Square s("SQUARE - S",5,7,12);
 	s.display();
 #endif	//end of block to test Square
 
-#if 1//Change 0 to 1 to test Rectangle
+#if 0//Change 0 to 1 to test Rectangle
 	cout << "\nTesting Functions in class Rectangle:";
 	Rectangle a("RECTANGLE A", 5, 7, 12, 15 );
 	a.display();
@@ -59,7 +60,7 @@ void GraphicsWorld::run()
 	rec3.display();
 #endif	// end of block to test Rectangle
 
-#if 1// Change 0 to 1 to test using array of pointer and polymorphism
+#if 0// Change 0 to 1 to test using array of pointer and polymorphism
 	cout << "\nTesting array of pointers and polymorphism:" <<endl;
 	Shape* sh[4];
 	sh[0] = &s;
@@ -71,4 +72,9 @@ void GraphicsWorld::run()
 	sh [2]->display();
 	sh [3]->display();
 #endif// end of block to test array of pointer and polymorphism
+
+#if 1
+	Circle c("Circle1", 0 , 0, 1);
+	c.display();
+#endif
 }

@@ -3,8 +3,8 @@
 #define RECTANGLE_H
 #include "square.h"
 
-class Rectangle : public Square{
-	
+class Rectangle : public Square
+{	
 	public:
 	Rectangle(const char* s, double x, double y, double a, double b);
 	void set_sideB(double x);
@@ -15,10 +15,6 @@ class Rectangle : public Square{
 	
 	private:
 	double side_b;
-	
-	
-	
-	
-	
+
 };
 #endif
