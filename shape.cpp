@@ -8,12 +8,15 @@
 #include <string.h>
 #include <iostream>
 
+
 using namespace std;
 
 Shape::Shape(const char *s, double x, double y):origin(x,y)
 {
 	shapeName = new char[strlen(s)+1];
+	
 	strcpy(shapeName, s);
+	
 	//cout << "\nconstructor with char* argument is called. \n";
 }
 	//ctor

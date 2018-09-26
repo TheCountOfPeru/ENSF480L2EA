@@ -17,6 +17,7 @@ class Point{
 	Point(double a, double b);
 	//Default ctor
 	
+	
 	double getX();
 	double getY();
 	void setx(double a);

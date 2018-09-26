@@ -5,6 +5,7 @@
 #include "point.h"
 #include <math.h>
 #include <iostream>
+#include <iomanip>
 #include <stdio.h>
 
 using namespace std;
@@ -22,6 +23,7 @@ Point::Point(double a, double b)
 	y = b;
 	id = objCount + 1000;
 }
+
 
 double Point::getX()
 {
@@ -68,6 +70,7 @@ double Point::distance (Point& the_point, Point& other)
 }
 void Point::display()
 {
-	printf("X-coordinate: %4.2f\n", x);
-	printf("Y-coordinate: %4.2f\n", y);	
+	cout<< fixed << setprecision(2);
+	cout<<"X-coordinate: "<< x << endl;
+	cout<<"Y-coordinate: "<< y << endl;	
 }

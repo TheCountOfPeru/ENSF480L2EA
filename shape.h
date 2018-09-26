@@ -16,12 +16,17 @@ class Shape{
 	//dtor
 	Shape& operator =(const Shape& rhs);
 	//overload assignment
+	
 	Point& getOrigin();
 	char* getName();
 	virtual void display();
 	double distance(Shape& other);
 	static double distance(Shape& the_shape, Shape& other);
 	void move(double dx, double dy);
+	
+	virtual double area() = 0;
+	virtual double perimeter() = 0;
+	
 	
 	protected:
 	Point origin;

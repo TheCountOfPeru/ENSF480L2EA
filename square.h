@@ -3,10 +3,17 @@
 #define SQUARE_H
 #include "shape.h"
 
-class Square: public Shape{
+class Square: virtual public Shape{
 	
 	public:
+	
 	Square(const char* s, double x, double y, double a);
+	
+	Square(const Square& src);
+	
+	~Square();
+	
+	Square& operator =(const Square& rhs);
 	
 	virtual double area();
 	
@@ -20,9 +27,9 @@ class Square: public Shape{
 	
 
 	protected:
+	
 	double side_a;
 	
-	private:
 	
 };
 #endif
