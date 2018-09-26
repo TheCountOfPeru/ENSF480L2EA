@@ -81,6 +81,9 @@ void GraphicsWorld::run()
 	sh [3]->display();
 #endif // end of block to test array of pointer and polymorphism
 
+
+// EXERCISE B TEST CODE
+
 #if 1
 	cout << "\nTesting Functions in class Circle:" <<endl;
 	Circle c ("CIRCLE C", 3, 5, 9);
