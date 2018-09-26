@@ -2,11 +2,6 @@
 // ENSF 480 Lab 2 -  FALL 2018 - Exercise A
 // Author - Jonathan Yee
 
-//#include <iostream>
-//#include "point.h"
-//#include "shape.h"
-//#include "square.h"
-//#include "rectangle.h"
 #include "graphicsWorld.h"
 using namespace std;
 
